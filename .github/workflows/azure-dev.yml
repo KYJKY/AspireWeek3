@@ -81,5 +81,8 @@ jobs:
             popd
 
       - name: Deploy Application
-        run: azd deploy --no-prompt
-        working-directory: ./
+        run: |
+            pushd ./ || exit
+            azd deploy --no-prompt
+            popd || exit
+        shell: bash
