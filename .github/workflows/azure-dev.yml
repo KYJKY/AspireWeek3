@@ -82,6 +82,7 @@ jobs:
 
       - name: Deploy Application
         run: |
+            :
               pushd ./
               azd deploy --no-prompt
               popd
