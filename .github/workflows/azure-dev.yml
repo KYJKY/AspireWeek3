@@ -84,6 +84,6 @@ jobs:
 
       - name: Deploy Application
         run: |
-          pushd ./AspireYouTubeSummariser.AppHost
+          pushd ./
           azd deploy --no-prompt
           popd
