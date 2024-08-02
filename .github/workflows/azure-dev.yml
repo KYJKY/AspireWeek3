@@ -78,8 +78,12 @@ jobs:
 
       - name: Provision Infrastructure
         run: |
+          pushd ./
           azd provision --no-prompt
+          popd
 
       - name: Deploy Application
         run: |
+          pushd ./AspireYouTubeSummariser.AppHost
           azd deploy --no-prompt
+          popd
