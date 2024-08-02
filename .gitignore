@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /backend/appsettings.Development.json
 /AspireYouTubeSummariser.AppHost/appsettings.Development.json
+.azure
