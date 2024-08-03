@@ -75,8 +75,14 @@ jobs:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Provision Infrastructure
-        run: azd provision --no-prompt
+        run: |
+          pushd ./
+          azd provision --no-prompt
+          popd
 
       - name: Deploy Application
-        run: azd deploy --no-prompt
+        run: |
+          pushd ./
+          azd deploy --no-prompt
+          popd
 
